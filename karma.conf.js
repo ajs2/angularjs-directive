@@ -11,27 +11,11 @@ module.exports = function (config) {
             frameworks: ["jasmine"],
 
 
-// list of files / patterns to load in the browser
+	    // list of files / patterns to load in the browser
             files: [
                 'bower_components/jquery/jquery.js',
-                'bower_components/underscore/underscore.js',
-                'bower_components/jquery-ui/ui/jquery.ui.widget.js',
-                'bower_components/jquery-ui/ui/jquery.ui.mouse.js',
                 'bower_components/angular/angular.js',
-                'bower_components/angular-cookies/angular-cookies.js',
-                'bower_components/angular-route/angular-route.js',
-                'bower_components/angular-touch/angular-touch.js',
-                'bower_components/angular-sanitize/angular-sanitize.js',
-                'bower_components/angular-resource/angular-resource.js',
                 'bower_components/angular-mocks/angular-mocks.js',
-                'bower_components/angular-ui-select2/src/select2.js',
-                'bower_components/jquery-ui/ui/jquery.ui.core.js',
-                'bower_components/jquery-ui/ui/jquery.ui.widget.js',
-                'bower_components/jquery-ui/ui/jquery.ui.mouse.js',
-                'bower_components/jquery-ui/ui/jquery.ui.draggable.js',
-                'bower_components/jquery-ui/ui/jquery.ui.droppable.js',
-                'bower_components/jquery-ui/ui/jquery.ui.position.js',
-                'bower_components/jquery-ui/ui/jquery.ui.tooltip.js',
                 'scripts/*.js',
                 'scripts/**/*.js',
 
@@ -43,8 +27,6 @@ module.exports = function (config) {
 
             preprocessors: {
                 'views/**/*.html': 'ng-html2js',
-                'scripts/**/*.js': 'coverage',
-                'scripts/*.js': 'coverage'
             },
 
             ngHtml2JsPreprocessor: {
@@ -55,17 +37,6 @@ module.exports = function (config) {
 // list of files to exclude
             exclude: [],
 
-
-            /*
-             plugins : [
-             'karma-html2js-preprocessor',
-             'karma-coverage',
-             'karma-junit-reporter',
-             'karma-chrome-launcher',
-             'karma-firefox-launcher',
-             'karma-jasmine'
-             ],
-             */
 
 // test results reporter to use
 // possible values: dots || progress || growl
@@ -105,7 +76,7 @@ module.exports = function (config) {
             singleRun: false,
 
             junitReporter: {
-                outputFile: '../target/surefire-reports/TEST-karma.xml',
+                outputFile: '../target/TEST-karma.xml',
                 suite: 'unit'
             },
 

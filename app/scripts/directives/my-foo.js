@@ -6,6 +6,13 @@ angular.module('MyTest')
             return {
                 restrict: 'E',
                 replace: true,
-                templateUrl: '/views/my-foo.html'
+                templateUrl: '/views/my-foo.html',
+		link: function ($scope, $element, $iAttrs, controller) {
+                	$scope.bar = 'foo';
+                	//$element.data('$scope', $scope);
+            	},
+            	controller: function ($scope) {
+                	$scope.foo = 'bar';
+            	}
             };
         }]);
