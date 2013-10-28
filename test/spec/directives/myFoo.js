@@ -7,7 +7,7 @@ describe('Directive: myFoo', function () {
 
     it('should have a scope', inject(function ($compile, $rootScope) {
         var scope = $rootScope.$new(),
-          element = angular.element('<my-foo></my-foo>');
+          element = angular.element('<div><my-foo></my-foo></div>');
 
         element = $compile(element)(scope);
         scope.$digest();
