@@ -13,6 +13,7 @@ describe('Directive: myFoo', function () {
         scope.$digest();
 
         expect(element.scope()).toBeDefined();
+        expect(element.scope().foo).toEqual('bar');
     }));
 });
 
