@@ -10,7 +10,6 @@ angular.module('MyTest')
                 templateUrl: '/views/my-foo.html',
 		link: function ($scope, $element, $iAttrs, controller) {
                 	$scope.bar = 'foo';
-                	//$element.data('$scope', $scope);
             	},
             	controller: function ($scope) {
                 	$scope.foo = 'bar';
