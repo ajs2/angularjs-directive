@@ -14,6 +14,7 @@ describe('Directive: myFoo', function () {
 
         expect(element.scope()).toBeDefined();
         expect(element.scope().foo).toEqual('bar');
+        expect(element.scope().$id).not.toEqual(scope.$id);
     }));
 });
 
